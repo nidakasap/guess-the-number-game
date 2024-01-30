@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Guess The Number</h1>
+      <div class="showNumber">?</div>
+    </header>
+    <main>
+      <section class="right">
+        <p class="msg">Game is starting!</p>
+        <p class="score-label">🎱 Guesses left:<span class="score">10</span></p>
+        <p class="top-score-label">
+          🏅 Top Score:<span class="top-score">0</span>/10
+        </p>
+      </section>
+      <section class="left">
+        <div class="inputWrapper">
+          <button
+            class="btnOperator"
+            type="button"
+            onclick="this.parentNode.querySelector('[type=number]').stepDown();"
+          >
+            -
+          </button>
+          <input
+            class="guessInput"
+            type="number"
+            name="number"
+            min="0"
+            max="20"
+            value="0"
+          />
+          <button
+            class="btnOperator"
+            type="button"
+            onclick="this.parentNode.querySelector('[type=number]').stepUp();"
+          >
+            +
+          </button>
+        </div>
+        <button class="btn" id="btnCheck">Check</button>
+        <button class="btn" id="btnAgain">Again</button>
+      </section>
+    </main>
+    <script src="guessTheNumber.js"></script>
+  </body>
+</html>
